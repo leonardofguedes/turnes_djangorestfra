@@ -6,19 +6,23 @@ CRIANDO API COM DJANGO REST FRAMEWORK EM 19 PASSOS e integrando em banco de dado
 
 1. No terminal do Pycharm instale o DRF
 > pip install DjangoRestFramework
+
 Ele fará a API.
 
 2. No terminal do Pycharm, inicie o projeto:
 > django-admin startproject name .
+
 Informação! Não esquecer o ponto.
 Informação! Nesse modelo o name é setup.
 
 3. No terminal do Pycharm, inicie o app:
 > django-admin startapp name
+
 Informação! Neste exemplo name == turne
 
 4. No terminal do Pycharm, instale o markdown:
 > pip install markdown
+
 Informação! Ele será suporte para o browser // para testar requisições.
 
 5. Em settings.py, em appinstaled, insira os novos apps ‘rest_framework’ e ‘turne’.
@@ -27,7 +31,8 @@ CRIANDO MODELO
 
 6. Em models.py, importe <models> de <django.db> 
 > from django.db import models
-Informação! Pode estar na idle já.
+
+    Informação! Pode estar na idle já.
 
 7. Crie a class/modelo:
 class Cantor(models.Model):
@@ -55,7 +60,8 @@ class Pais(models.Model):
     def __str__(self):
         return self.nome
 
-Informação! No nível, observar a função max_lenght, choices, blank e null. 
+
+    Informação! No nível, observar a função max_lenght, choices, blank e null. 
 Informação! O max_lenght de 1 caracter diz que no DB será salvo apenas 1 letras.
 Informação! O choices aplica as variáveis dispostas.
 Informação! O blank False não permite que no DB não tenha nível.
