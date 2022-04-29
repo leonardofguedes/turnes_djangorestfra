@@ -5,53 +5,45 @@ e integrando em banco de dados no Pycharm (para iniciantes)
 ### 📋 Pycharm, Python, Django Rest Framework
 
 
-1. No terminal do Pycharm instale o DRF
+1. No terminal do Pycharm instale o DRF | ele fará a API
 
 ```
     pip install DjangoRestFramework
 ```
 
-Ele fará a API.
 
-2. No terminal do Pycharm, inicie o projeto:
+2. No terminal do Pycharm, inicie o projeto. Obs1: Não esqueça o ponto. Obs2: Nesse modelo, o 'name' é setup.
 
 ```
     django-admin startproject name .
 ```
 
-Informação! Não esquecer o ponto.
-Informação! Nesse modelo o name é setup.
 
-3. No terminal do Pycharm, inicie o app:
+3. No terminal do Pycharm, inicie o app. Neste exemplo, 'name' será turne.
 
 ```
     django-admin startapp name
 ```
 
-Informação! Neste exemplo name == turne
 
-
-4. No terminal do Pycharm, instale o markdown:
+4. No terminal do Pycharm, instale o markdown. É o suporte do browser.
 
 ```
     pip install markdown
 ```
 
-Informação! Ele será suporte para o browser // para testar requisições.
 
-
-5. Em settings.py, em appinstaled, insira os novos apps ‘rest_framework’ e ‘turne’.
+5. Em settings.py, na lista appinstaled, insira os novos apps ‘rest_framework’ e ‘turne’.
 
 
 # CRIANDO MODELO
 
 
-6. Em models.py, importe <models> de <django.db> 
+6. Em models.py, importe <models> de <django.db>. Ele pode já estar na idle. 
 
 ```
     from django.db import models
 ```
-Informação! Pode estar na idle já.
 
 
 7. Crie a class/modelo:
@@ -83,13 +75,17 @@ Informação! Pode estar na idle já.
             return self.nome
 ```
 
-Informação! No nível, observar a função max_lenght, choices, blank e null. 
-Informação! O max_lenght de 1 caracter diz que no DB será salvo apenas 1 letras.
-Informação! O choices aplica as variáveis dispostas.
-Informação! O blank False não permite que no DB não tenha nível.
-Informação! O null False não permite que seja nulo.
-Informação! O Default é o modelo-base, que no caso escolhido é ‘B’.
-
+    
+```
+Informações:
+Informação 1! No nível, observar a função max_lenght, choices, blank e null. 
+Informação 2! O max_lenght de 1 caracter diz que no DB será salvo apenas 1 letras.
+Informação 3! O choices aplica as variáveis dispostas.
+Informação 4! O blank False não permite que no DB não tenha nível.
+Informação 5! O null False não permite que seja nulo.
+Informação 6! O Default é o modelo-base, que no caso escolhido é ‘B’.
+```
+    
 8. Suba as migrações no Data Base através do terminal:
 
 ```
@@ -123,13 +119,15 @@ Informação! O Default é o modelo-base, que no caso escolhido é ‘B’.
 
     admin.site.register(Pais, Paises)
 ```
+```
+INFORMAÇÕES:
+Informação 1! O ‘id’ sempre é gerado.
+Informação 2! list_diplay_links são os Fields que o admin pode alterar/editar
+Informação 3! search_fields serve para buscar os atributos indicados
+Informação 4! list_per_page é o máximo de itens por página 
+Informação 5! admin.site.register(m, c) registra o (modelo e a configuração)
+```
     
-Informação! O ‘id’ sempre é gerado.
-Informação! list_diplay_links são os Fields que o admin pode alterar/editar
-Informação! search_fields serve para buscar os atributos indicados
-Informação! list_per_page é o máximo de itens por página 
-Informação! admin.site.register(m, c) registra o (modelo e a configuração)
-
 11. Criar SuperUsuario no terminal:
 ```
     python manage.py createsuperuser
