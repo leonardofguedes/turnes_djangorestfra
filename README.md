@@ -207,7 +207,7 @@ Informação! queryset busca dados no db
     urlpatterns = [
         path('admin/', admin.site.urls),
         path('', include(router.urls)),
-        path('cantor/<int:pk>/', CantorViewSet.as_view),
-        path('paise/<int:pk>/', PaisViewSet.as_view)
+        path('cantor/<int:pk>/', CantorViewSet.as_view()),
+        path('paise/<int:pk>/', PaisViewSet.as_view())
     ]
 ```
