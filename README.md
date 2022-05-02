@@ -190,7 +190,7 @@ Informação! queryset busca dados no db
 ```
     from django.contrib import admin
     from turne.views import CantorViewSet, PaisViewSet
-    from rest_framework import routers  será usada como rota default no browser
+    from rest_framework import routers
     from django.urls import path, include
 ```
     
