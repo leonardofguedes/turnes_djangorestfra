@@ -211,3 +211,5 @@ Informação! queryset busca dados no db
         path('paise/<int:pk>/', PaisViewSet.as_view)
     ]
 ```
+
+# Agora python manage.py runserver !!!!!!!!!!!!!!!!!!!
