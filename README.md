@@ -212,4 +212,4 @@ Informação! queryset busca dados no db
     ]
 ```
 
-# Agora python manage.py runserver !!!!!!!!!!!!!!!!!!!
+# Agora escreva $ python manage.py runserver e voilà!
